@@ -100,7 +100,7 @@ class FrancaDBusGenerator implements IGenerator {
         }
     }
 
-    def private doGenerateDBusComponents(FModel fModel, List<FDInterface> deployedInterfaces,
+    def doGenerateDBusComponents(FModel fModel, List<FDInterface> deployedInterfaces,
         IFileSystemAccess fileSystemAccess, IResource res) {
         val defaultDeploymentAccessor = new DeploymentInterfacePropertyAccessorWrapper(null) as DeploymentInterfacePropertyAccessor
 
