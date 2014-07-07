@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+             <extension
+                point="org.franca.core.dsl.francaValidator">
+                  <validator
+                        class="org.genivi.commonapi.dbus.validator.ValidatorDBus"
+                        mode="FAST"
+                        name="ValidatorDBus">
+                  </validator>
+               </extension>
+               <extension
+                   point="org.eclipse.ui.preferencePages">
+                <page
+                      class="org.genivi.commonapi.dbus.validator.preference.ValidatorDBusPreferencesPage"
+                      id="org.genivi.commonapi.dbus.validator.preference"
+                      name="Validator DBus">
+                </page>
+             </extension>
+</plugin>
