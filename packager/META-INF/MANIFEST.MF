@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DBUS code generator installer
+Bundle-Vendor: Pelagicore
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: dummy
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.genivi.commonapi.dbus
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
