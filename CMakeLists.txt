@@ -1,14 +1,17 @@
 
-project(common-api-dbus-tools)
+cmake_minimum_required(VERSION 2.6)
+
+set(PACKAGE common-api-dbus-tools)
+PROJECT(${PACKAGE})
 
 find_package(CommonAPICodeGenFramework)
 import_maven_repository(common-api-tools)
 
 # We build and install the "almost-vanilla" dbus code generator
-add_maven_package(dbus-codegen ${CMAKE_CURRENT_SOURCE_DIR}/org.genivi.commonapi.dbus/pom.xml "")
+add_maven_package(dbus-codegen ${CMAKE_CURRENT_SOURCE_DIR}/org.genivi.commonapi.dbus "")
 
 # Then we build our "packager" which produces the dependencies folder, which we install in the command-line generator folder
-add_maven_package(packager ${CMAKE_CURRENT_SOURCE_DIR}/packager/pom.xml dbus-codegen)
+add_maven_package(packager ${CMAKE_CURRENT_SOURCE_DIR}/packager dbus-codegen)
 
 # Install dependencies
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/packager/target/dependencies/ DESTINATION ${COMMON_API_CODEGEN_JAR_DESTINATION_PATH})
