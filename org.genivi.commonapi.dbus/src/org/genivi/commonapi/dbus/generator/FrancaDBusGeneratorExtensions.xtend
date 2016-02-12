@@ -200,13 +200,7 @@ class FrancaDBusGeneratorExtensions {
     }
 
     def getDBusVersion() {
-        val bundle = FrameworkUtil::getBundle(this.getClass())
-        val bundleContext = bundle.getBundleContext();
-        for (b : bundleContext.bundles) {
-            if (b.symbolicName.equals("org.genivi.commonapi.dbus")) {
-                return b.version
-            }
-        }
+    	return "3.1.5"
     }
 
     def generateCommonApiDBusLicenseHeader() '''

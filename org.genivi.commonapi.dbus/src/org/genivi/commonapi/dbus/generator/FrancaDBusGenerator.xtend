@@ -189,7 +189,7 @@ class FrancaDBusGenerator implements IGenerator {
         }                       
     }
     
-    def private void doGenerateComponents(FModel _model,
+    def void doGenerateComponents(FModel _model,
                                           List<FDInterface> _interfaces,
                                           List<FDTypes> _typeCollections,
                                           List<FDProvider> _providers,
