@@ -19,9 +19,9 @@ public class Generator implements GeneratorInterface {
 	@Inject
 	FrancaDBusGenerator generator;
 
-	public void generate(FModel fModel, List<FDInterface> deployedInterfaces,
+	public void generate(FModel fModel, List<FDInterface> deployedInterfaces, List<FDTypes> types,
 			IFileSystemAccess fileSystemAccess, IResource res) {
-		generator.doGenerateComponents(fModel, deployedInterfaces, new ArrayList<FDTypes>(), new ArrayList<FDProvider>(),
+		generator.doGenerateComponents(fModel, deployedInterfaces, types, new ArrayList<FDProvider>(),
 				fileSystemAccess, res);
 	}
 
